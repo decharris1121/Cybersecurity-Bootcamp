@@ -1,0 +1,25 @@
+#!/bin/bash
+mkdir ~/research3 2> /dev/null
+
+echo "A Quick System Audit Script" > ~/research3/sys_info.txt
+date >> ~/research3/sys_info.txt
+echo "" >> ~/research3/sys_info.txt
+echo "Machine Type Info:" >> ~/research3/sys_info.txt
+echo $MACHTYPE >> ~/research3/sys_info.txt
+echo -e "Uname info: $(uname -a) \n" >> ~/research3/sys_info.txt
+echo -e "IP info: $(ip addr | grep inet | head -9 | tail -1) \n" >> ~/research3/sys_info.txt
+echo "Hostname: $(hostname -s) " >> ~/research3/sys_info.txt
+echo "DNS servers: "
+echo -e "\n777 Files:" >> ~/research3/sys_info.txt
+find / -type f -perm 777 >> ~/research3/sys_info.txt
+echo -e "\nTop 10 Processes" >> ~/research3/sys_info.txt
+ps aux -m | awk {'print $1, $2, $3, $4, $11'} | head >> ~/research3/sys_info.txt
+cat /etc/resolv.conf
+echo "Memory Info:"
+free
+echo -e "\nCPU Info:"
+lscpu | grep CPU
+echo -e "\nDisk Usage:"
+df -H | head -2
+echo -e "\nWho is logged in: \n $(who) \n"
+
