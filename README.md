@@ -1,5 +1,4 @@
-# Cybersecurity-Bootcamp
-## Automated ElkStack Deployment
+# Automated ElkStack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
@@ -75,16 +74,14 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly Available, in addition to restricting Traffic to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting Traffic to the network.
+Load balancers protect the your Network's availability and Web Traffic/Secuirity. By using the Jumpbox Virtual machine we are capable of automation of the Network seccurity, by separating the vulnerable Virtual Machines(VMs) with Network Segmentation we will use Access Control to restrict the Network traffic that accesses these VMs.
 
-_TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_-A:  Availability, Web Traffic/Security. 
-           B: Automation, Security, Network Segmentation, Access Control
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_Changes in the System Logs
-- _TODO: What does Metricbeat record?_Metricbeat is used to record system performance logs
+Integrating an ELK server also allows users to easily monitor the vulnerable VMs for changes to the data and system logs. We will install beats on this server to monitor system logs and record data from pentesting we will do on these VMs.
+Filebeat watches for changes in the System Logs.
+Metricbeat is used to record system performance logs.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -98,11 +95,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_73.176.8.245
+#Add whitelisted IP addresses_73.176.8.245
 
-Machines within the network can only be accessed bymy Home PC and Jumpbox Provisioner.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-Jumpbox Provisioner. 40.121.68.30
+Machines within the network can only be accessed by MyHome PC and Jumpbox Provisioner.
+The VM we allowed access to our ELK VM was the Jumpbox Provisioner located at IP 40.121.68.30
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
@@ -116,8 +112,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-Ansible allows you to batch large tasks into one playbook. This helps when configuring multiple machines at once to simplify your processes. You can tailor the playbook to the machines specific needs.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible allows you to batch large tasks into one playbook. This helps when configuring multiple machines at once to simplify your processes. You can tailor the playbook to the machines specific needs.
 
 The playbook implements the following tasks:
 The playbook installs Docker.io onto the new machine
@@ -140,7 +135,8 @@ We have installed the following Beats on these machines:
 Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-Filebeat logs system information. This allows your system’s functions to be monitored and the information to be forwarded for further analysis. Metricbeat monitors system performance. It monitors the system CPU, memory and load, among other things and displays the performance data to the user.
+Filebeat logs system information. This allows your system’s functions to be monitored and the information to be forwarded for further analysis. 
+Metricbeat monitors system performance. It monitors the system CPU, memory and load, among other things and displays the performance data to the user.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
