@@ -159,14 +159,15 @@ Edit/Run the Filebeat Playbook using ansible-playbook filebeat-playbook.yml to i
 http://104.45.215.3:5601/app/kibana#/home
 
 # FOR METRICBEAT CONFIGURATION
-Copy the metricbeat-config.yml file to the container from the Resources to /etc/ansible/
+Copy the metricbeat-config.yml file to the container from the Resources to /etc/ansible/.
 Navigate to http://104.45.215.3:5601/app/kibana to access the latest Linux Installation of Metricbeat.
-Update the Config file with our Specified IP addresses
-Edit/Run the Metricbeat Playbook using ansible-playbook metricbeat-playbook.yml to install filebeat onto the selected virtual Machine
-/etc/ansible/metricbeat-playbook.yml. /etc/metricbeat/metricbeat-playbook.yml
+Update the Config file with our Specified IP addresses.
+Edit/Run the Metricbeat Playbook using ansible-playbook metricbeat-playbook.yml to install filebeat onto the selected virtual Machine.
+/etc/ansible/metricbeat-playbook.yml. /etc/metricbeat/metricbeat-playbook.yml.
 /etc/ansible/metricbeat-config.yml. By Specifying the IP addresses of the Elk Machine in the Config File.
-http://104.45.215.3:5601/app/kibana#/home
-The Following Screenshots are from the Daily ElkStack Week Activities
+http://104.45.215.3:5601/app/kibana#/home.
+
+# The Following Screenshots are from the Daily ElkStack Week Activities.
 ![Project1day1Screenshot](https://user-images.githubusercontent.com/82415281/133950571-66035191-2ce8-4d3e-bdf6-ed5ea77e05a0.PNG)
 ![Project1day2Screenshot1](https://user-images.githubusercontent.com/82415281/133950597-57723a8c-1816-4814-9f37-8549227aaa69.PNG)
 ![Project1day2Screenshot2](https://user-images.githubusercontent.com/82415281/133950602-8546c05d-85c0-4856-a6fa-a6ebb7d51f11.PNG)
