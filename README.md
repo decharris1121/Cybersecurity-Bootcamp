@@ -115,12 +115,12 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible allows you to batch large tasks into one playbook. This helps when configuring multiple machines at once to simplify your processes. You can tailor the playbook to the machines specific needs.
 
 The playbook implements the following tasks:
-The playbook installs Docker.io onto the new machine
+The playbook installs Docker.io onto the new machine.
 The playbook downloads and installs the python language that will be used to run the programs specified.
-Uses Pip3 to install the Docker Module
-Download and install a Docker Elk Container that runs on the Specified Ports
-Increases the Total memory of the VM
-Ensures Docker is running on restarts
+Uses Pip3 to install the Docker Module.
+Downloads and installs a Docker Elk Container that runs on the Specified Ports.
+Increases the Total memory of the VM.
+Ensures Docker is running on restarts.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 ![Docker on Elk](https://user-images.githubusercontent.com/82415281/133950524-ba7cab1b-1ebc-4443-8486-9f7c2968455a.PNG)
