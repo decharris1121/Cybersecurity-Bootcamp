@@ -75,7 +75,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting Traffic to the network.
-Load balancers protect your Network's availability and Web Traffic/Security. By using the Jumpbox Virtual machine we are capable of automation of the Network seccurity, by separating the vulnerable Virtual Machines(VMs) with Network Segmentation we will use Access Control to restrict the Network traffic that accesses these VMs.
+Load balancers protect your Network's availability and Web Traffic/Security. By using the Jumpbox Virtual machine we are capable of automation of the Network security, by separating the vulnerable Virtual Machines(VMs) with Network Segmentation we will use Access Control to restrict the Network traffic that accesses these VMs.
 
 Integrating an ELK server also allows users to easily monitor the vulnerable VMs for changes to the data and system logs. We will install beats on this server to monitor system logs and record data from pentesting we will do on these VMs.
 Filebeat watches for changes in the System Logs.
