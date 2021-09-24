@@ -143,12 +143,12 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-FOR ELK CONFIGURATION
+# FOR ELK CONFIGURATION
 Copy the install-elk.yml file to the Container.
 - Update the install-elk.yml file to include the selected  services, applications, and installations you would like it to run on the Elkserver
 - Run the playbook using ansible-playbook install-elk.yml to install elk on the selected virtual machine.
 
-FOR FILEBEAT CONFIGURATION
+# FOR FILEBEAT CONFIGURATION
 Copy the filebeat-config.yml file to the container using the curl command: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml
 Copy the Filebeat config file to /etc/filebeat/filebeat-playbook.yml
 Use Kibana to help install most recent version of filebeat for linux
@@ -157,7 +157,8 @@ Edit/Run the Filebeat Playbook using ansible-playbook filebeat-playbook.yml to i
 /etc/ansible/roles/filebeat-playbook.yml. /etc/filebeat/filebeat-playbook.yml
 /etc/ansible/filebeat-config.yml. By specifying the IP addresses of the Elk Machine in the Config file.
 http://104.45.215.3:5601/app/kibana#/home
-FOR METRICBEAT CONFIGURATION
+
+# FOR METRICBEAT CONFIGURATION
 Copy the metricbeat-config.yml file to the container from the Resources to /etc/ansible/
 Navigate to http://104.45.215.3:5601/app/kibana to access the latest Linux Installation of Metricbeat.
 Update the Config file with our Specified IP addresses
